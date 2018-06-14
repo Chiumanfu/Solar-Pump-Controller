@@ -35,7 +35,7 @@ byte relayOff = 20;             //time to turn relay off
 void setup () {
   Wire.begin();
   lcd.begin(20, 4);
-  pinMode(buttonPin, INPUT);
+  pinMode(buttonPin, INPUT);    //internal pullup isn't strong enough?
   pinMode(relayPin, OUTPUT);
   digitalWrite(relayPin, 0);
   lcd.setCursor(18, 2);
